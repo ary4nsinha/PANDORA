@@ -2,7 +2,8 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 %matplotlib inline
-import pytesseract
+import 
+# PATH TO TESSERACT FILE
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract"
 
 def ocr_with_preprocessing(image_path):
@@ -20,20 +21,13 @@ def ocr_with_preprocessing(image_path):
     
     return text
 
+# IMAGE PATH
 image_path = "SAMPLE/ss.png"
 extracted_text = ocr_with_preprocessing(image_path)
 print(extracted_text)
 
+# IMAGE DISPLAY
 img = cv2.imread('SAMPLE/ss.png')
-
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 plt.imshow(img)
 
-image_path = "SAMPLE/num2.jpg"
-extracted_text = pytesseract.image_to_string(image_path)
-print(extracted_text)
-
-img = cv2.imread('SAMPLE/num2.jpg')
-
-img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-plt.imshow(img)
