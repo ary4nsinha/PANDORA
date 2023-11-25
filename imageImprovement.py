@@ -1,7 +1,7 @@
 import cv2
 import matplotlib.pyplot as plt
 
-img_path = "test/numberPlate4.jpg"
+img_path = "assets/numberPlate4.jpg"
 img = cv2.imread(img_path)
 
 if img is None:
