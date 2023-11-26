@@ -22,4 +22,6 @@ else:
 
     plt.show()
 
+    #imgImprovement -> textExtraction -> saveToDict function
+
     
